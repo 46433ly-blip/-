@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-t="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.supabase.co; form-action 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'">
+<title>علیرضا پاپی | طراح سایت</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0e16;--bg-soft:#111524;--surface:#161b2c;--line:#242a40;--text:#e9ecf5;--text-dim:#9aa2bd;--accent:#5eead4;--accent-2:#a78bfa;--hd:rgba(11,14,22,.85);--on:#06231d;color-scheme:dark}
+[data-t=light]{--bg:#f6f7fb;--bg-soft:#eceff7;--surface:#fff;--line:#dde1ee;--text:#151a2b;--text-dim:#566080;--accent:#0d9483;--accent-2:#6d4fd8;--hd:rgba(246,247,251,.88);--on:#fff;color-scheme:light}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px;overflow-x:hidden;max-width:100%}
+body{font-family:'Vazirmatn',Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.85;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;overflow-x:hidden;max-width:100%}
+a{color:inherit}
+section{padding:96px 0}
+h1,h2,h3{font-weight:800;line-height:1.35}
+h2{font-size:clamp(24px,3.4vw,34px);margin-bottom:14px}
+input,textarea{font-family:inherit}
+
+/* a1: قاب اصلی محتوا */
+.a1{width:min(92%,1080px);margin-inline:auto}
+/* a2: متن توضیح زیر عنوان */
+.a2{color:var(--text-dim);font-size:16px;max-width:640px;margin-bottom:48px}
+/* هدر */
+header{position:sticky;top:0;z-index:40;background:var(--hd);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+/* a3: ردیف هدر */
+.a3{display:flex;align-items:center;justify-content:space-between;height:76px;gap:12px}
+/* a4: لوگو - a5: مربع لوگو */
+.a4{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px}
+.a5{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#0b0e16;font-weight:800;font-size:15px}
+/* a6: لینک‌های منو */
+.a6{display:flex;gap:6px}
+.a6 a{padding:9px 14px;border-radius:9px;font-size:14.5px;color:var(--text-dim);text-decoration:none;transition:.2s}
+.a6 a:hover{color:var(--text);background:var(--surface)}
+/* a56: گروه دکمه‌های سمت چپ هدر */
+.a56{display:flex;align-items:center;gap:10px}
+/* a7: دکمه شروع پروژه */
+.a7{padding:10px 20px;border-radius:9px;font-size:14.5px;font-weight:600;background:var(--accent);color:var(--on);text-decoration:none;white-space:nowrap}
+/* a8: همبرگر - a49: دکمه شب و روز */
+.a8,.a49{background:var(--surface);border:1px solid var(--line);color:var(--text);width:40px;height:40px;border-radius:10px;font-size:18px;cursor:pointer}
+.a8{display:none}
+/* a9: بخش اول */
+.a9{position:relative;padding:88px 0 90px;overflow:hidden}
+.a10{position:absolute;inset:0;z-index:0;pointer-events:none;display:flex;align-items:center;font-size:min(46vw,520px);font-weight:800;color:var(--surface);opacity:.6;line-height:1;user-select:none;transform:translateX(-8%)}
+.a11{position:relative;z-index:1;max-width:680px}
+.a12{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-size:14.5px;font-weight:600;margin-bottom:22px}
+.a12::before{content:"●";font-size:8px}
+.a9 h1{font-size:clamp(30px,5vw,46px);margin-bottom:18px}
+.a9 h1 span{color:var(--accent)}
+.a9 p{color:var(--text-dim);font-size:16.5px;max-width:560px;margin-bottom:34px}
+.a13{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+/* a14: دکمه - a15: دکمه رنگی - a16: دکمه خطی */
+.a14{padding:14px 26px;border-radius:11px;font-size:15px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:.2s;border:0;cursor:pointer;font-family:inherit}
+.a15{background:var(--accent);color:var(--on)}
+.a15:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.a16{background:transparent;color:var(--text);border:1px solid var(--line)}
+.a16:hover{border-color:var(--accent);color:var(--accent)}
+.a17{display:flex;flex-wrap:wrap;gap:10px}
+.a18{padding:8px 16px;border-radius:100px;font-size:13.5px;color:var(--text-dim);border:1px solid var(--line);background:var(--surface)}
+/* a19: انیمیشن ورود */
+.a19{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.a19.on{opacity:1;transform:none}
+/* درباره من */
+.a20{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.a20 p{color:var(--text-dim);margin-bottom:16px;font-size:15.5px}
+.a21{display:grid;gap:16px}
+.a22{padding:18px 20px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.a22 b{display:block;font-size:15px;margin-bottom:4px}
+.a22 span{color:var(--text-dim);font-size:14px}
+/* a23: بخش‌های با پس‌زمینه دوم */
+.a23{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+/* a24: شبکه کارت‌ها - a25: کارت - a26: آیکون کارت */
+.a24{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.a25{padding:28px;background:var(--surface);border:1px solid var(--line);border-radius:14px;transition:.2s}
+.a25:hover{border-color:var(--accent)}
+.a26{width:44px;height:44px;border-radius:10px;margin-bottom:18px;background:rgba(94,234,212,.12);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:19px}
+.a25 h3{font-size:17px;margin-bottom:10px}
+.a25 p{color:var(--text-dim);font-size:14.5px}
+/* a27: مهارت‌ها */
+.a27{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.a28{padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.a29{display:flex;justify-content:space-between;gap:8px;margin-bottom:10px;font-size:14.5px}
+.a29 span:last-child{color:var(--text-dim);font-size:13px;text-align:left}
+.a30{height:6px;border-radius:100px;background:var(--bg-soft);overflow:hidden}
+.a30 i{display:block;height:100%;border-radius:100px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+/* a31: نمونه‌کار */
+.a31{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.a32{border:1px dashed var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:14px;min-height:200px;justify-content:space-between}
+.a33{color:var(--text-dim);font-size:13.5px}
+.a32 h3{font-size:16px;color:var(--text-dim);font-weight:600}
+/* a34: نظرات (فرم + لیست) - a35: فرم - a36: فیلد */
+.a34{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:start}
+.a35{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:grid;gap:14px}
+.a35 h3{font-size:17px}
+.a36{display:grid;gap:6px;font-size:13.5px;color:var(--text-dim)}
+.a36 input,.a36 textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:14.5px}
+.a36 input:focus,.a36 textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.a36 textarea{min-height:110px;resize:vertical}
+.a57{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+/* a37: لیست نظرات - a38: باکس نظر - a39: پیام خالی - a40: پیام فرم */
+.a37{display:grid;gap:14px}
+.a38{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.a38 b{display:block;margin-bottom:6px}
+.a38 p{color:var(--text-dim);font-size:14.5px;overflow-wrap:anywhere}
+.a39{border:1px dashed var(--line);border-radius:14px;padding:34px;text-align:center;color:var(--text-dim);font-size:15px}
+.a40{font-size:13.5px;color:var(--accent);min-height:20px}
+.a55{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+/* تماس */
+.a41{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.a42{display:grid;gap:14px}
+.a43{display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--surface);border:1px solid var(--line);border-radius:12px;text-decoration:none}
+.a43 b{font-size:14px;display:block}
+.a43 span span{color:var(--text-dim);font-size:13px;display:block}
+.a44{width:38px;height:38px;border-radius:9px;background:rgba(167,139,250,.14);display:flex;align-items:center;justify-content:center;color:var(--accent-2);flex-shrink:0}
+/* a50: فوتر */
+.a50{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--text-dim);font-size:13.5px}
+.a50 button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;text-decoration:underline;margin-inline-start:10px;opacity:.6}
+/* a45: دکمه‌های شناور */
+.a45{position:fixed;left:20px;bottom:20px;z-index:50;display:flex;flex-direction:column;gap:10px}
+.a46{display:flex;align-items:center;gap:10px;padding:13px 18px;border-radius:100px;background:var(--surface);border:1px solid var(--line);color:var(--text);text-decoration:none;font-size:14px;font-weight:600;box-shadow:0 10px 24px rgba(0,0,0,.25);transition:.25s}
+.a47{width:9px;height:9px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.a48{transition:.2s;white-space:nowrap}
+.a46.mini{padding:13px}
+.a46.mini .a48{width:0;opacity:0;overflow:hidden}
+/* a51: پنجره مدیر - a52: جعبه - a53: ردیف نظر در پنل */
+.a51{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:16px}
+.a51.show{display:flex}
+.a52{width:min(100%,680px);max-height:90vh;overflow:auto;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:24px;display:grid;gap:16px}
+.a53{border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;gap:8px;background:var(--surface)}
+.a53 small{color:var(--text-dim);direction:ltr;text-align:right;overflow-wrap:anywhere}
+.a53 p{font-size:14.5px;overflow-wrap:anywhere}
+.a54{display:flex;gap:8px;flex-wrap:wrap}
+.a54 button{padding:7px 14px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:inherit;font-size:13px;cursor:pointer}
+.a54 .del{color:#f87171;border-color:#f8717155}
+
+@media(max-width:860px){
+ .a6{display:none;position:absolute;top:76px;right:0;left:0;flex-direction:column;gap:2px;padding:10px;background:var(--bg-soft);border-bottom:1px solid var(--line)}
+ .a6.open{display:flex}
+ .a6 a{padding:13px 14px;width:100%}
+ .a8{display:block}
+ .a20,.a41,.a34{grid-template-columns:1fr}
+ .a24,.a31{grid-template-columns:1fr}
+ section{padding:70px 0}
+ .a9{padding:60px 0 70px}
+ .a7{padding:9px 14px;font-size:13.5px}
+ .a4{font-size:15px}
+}
+@media(max-width:520px){
+ .a13{flex-direction:column;align-items:stretch}
+ .a14{justify-content:center}
+ .a57{grid-template-columns:1fr}
+ .a7{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="a1 a3">
+    <div class="a4"><span class="a5">AP</span> علیرضا پاپی</div>
+    <nav class="a6" id="nv">
+      <a href="#about">درباره من</a>
+      <a href="#services">خدمات</a>
+      <a href="#skills">مهارت‌ها</a>
+      <a href="#portfolio">نمونه‌کارها</a>
+      <a href="#reviews">نظرات</a>
+    </nav>
+    <div class="a56">
+      <button class="a49" id="tg" aria-label="تغییر حالت شب و روز">☀️</button>
+      <a class="a7" href="#contact">شروع پروژه</a>
+      <button class="a8" id="bg" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="a9">
+  <div class="a10" aria-hidden="true">&lt;/&gt;</div>
+  <div class="a1 a11 a19" id="hb">
+    <div class="a12">در دسترس برای پروژه‌های جدید</div>
+    <h1>وب‌سایتی که <span>کسب‌وکارتان</span> را جدی نشان می‌دهد</h1>
+    <p>من علیرضا پاپی هستم؛ طراح سایت و دانشجوی نرم‌افزار. سایت شرکتی، فروشگاه اینترنتی یا صفحه شخصی شما را با کدنویسی اختصاصی، بدون قالب‌های آماده و کاملاً ریسپانسیو طراحی می‌کنم — با تمرکز روی سرعت بالا و تجربه کاربری روان.</p>
+    <div class="a13">
+      <a class="a14 a15" href="#contact">درخواست مشاوره رایگان</a>
+      <a class="a14 a16" href="#portfolio">دیدن نمونه‌کارها</a>
+    </div>
+    <div class="a17">
+      <span class="a18">مشاوره رایگان</span>
+      <span class="a18">طراحی مدرن</span>
+      <span class="a18">قیمت اقتصادی</span>
+      <span class="a18">پشتیبانی پس از تحویل</span>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="a1 a20">
+    <div>
+      <h2>درباره من</h2>
+      <p>دانشجوی رشته نرم‌افزار هستم و طراحی و کدنویسی وب رو دنبال می‌کنم. کارم رو از صفر با HTML و CSS شروع کردم و الان روی ساخت سایت‌های شخصی، فروشگاهی و شرکتی با کدنویسی اختصاصی کار می‌کنم — بدون قالب آماده و بدون باگ.</p>
+      <p>برام مهمه که سایت هم زیبا باشه، هم سریع بالا بیاد، هم روی موبایل بدون مشکل نمایش داده بشه. قبل از شروع هر پروژه یه مشاوره رایگان می‌ذاریم تا دقیقاً چیزی که لازم دارید رو بسازیم.</p>
+    </div>
+    <div class="a21">
+      <div class="a22"><b>تخصص</b><span>طراحی سایت، فروشگاه اینترنتی و رابط کاربری (UI/UX)</span></div>
+      <div class="a22"><b>روش کار</b><span>کدنویسی اختصاصی — بدون قالب‌های آماده</span></div>
+      <div class="a22"><b>اولویت</b><span>سرعت بالا، ریسپانسیو کامل، بدون باگ</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="a23">
+  <div class="a1">
+    <h2>خدمات</h2>
+    <p class="a2">از طراحی اولین سایت شخصی شما تا راه‌اندازی فروشگاه اینترنتی کامل.</p>
+    <div class="a24">
+      <div class="a25"><div class="a26">◧</div><h3>طراحی سایت شرکتی و شخصی</h3><p>صفحه معرفی کسب‌وکار، رزومه یا نمونه‌کار شخصی، طراحی‌شده با هویت بصری مخصوص خودتان.</p></div>
+      <div class="a25"><div class="a26">▤</div><h3>فروشگاه اینترنتی</h3><p>راه‌اندازی آنلاین‌شاپ برای کافه، بوتیک یا هر کسب‌وکاری، با مدیریت محصول و پرداخت.</p></div>
+      <div class="a25"><div class="a26">◔</div><h3>طراحی UI/UX</h3><p>طراحی رابط کاربری ساده و قابل فهم با فیگما، تا تجربه استفاده از سایت برای مشتری راحت باشه.</p></div>
+      <div class="a25"><div class="a26">⌁</div><h3>بهینه‌سازی سرعت</h3><p>بهبود سرعت بارگذاری سایت‌های موجود، حتی روی اینترنت ضعیف و دستگاه‌های قدیمی.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="a1">
+    <h2>مهارت‌ها</h2>
+    <p class="a2">روی HTML، CSS، طراحی UI/UX با فیگما و کار با گیت‌هاب مسلط هستم؛ جاوااسکریپت و دستورات خط‌فرمان گیت رو دارم یاد می‌گیرم.</p>
+    <div class="a27">
+      <div class="a28"><div class="a29"><span>HTML / CSS</span><span>پیشرفته</span></div><div class="a30"><i style="width:90%"></i></div></div>
+      <div class="a28"><div class="a29"><span>UI / UX (فیگما)</span><span>پیشرفته</span></div><div class="a30"><i style="width:88%"></i></div></div>
+      <div class="a28"><div class="a29"><span>گیت‌هاب</span><span>آشنا — دستورات ترمینال در حال یادگیری</span></div><div class="a30"><i style="width:60%"></i></div></div>
+      <div class="a28"><div class="a29"><span>جاوااسکریپت</span><span>در حال یادگیری</span></div><div class="a30"><i style="width:35%"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="a23">
+  <div class="a1">
+    <h2>نمونه‌کارها</h2>
+    <p class="a2">پروژه‌ها به‌زودی اینجا اضافه می‌شن.</p>
+    <div class="a31">
+      <div class="a32"><div class="a33">پروژه بعدی</div><h3>جای نمونه‌کار بعدی</h3></div>
+      <div class="a32"><div class="a33">پروژه بعدی</div><h3>جای نمونه‌کار بعدی</h3></div>
+      <div class="a32"><div class="a33">پروژه بعدی</div><h3>جای نمونه‌کار بعدی</h3></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="a1">
+    <h2>نظرات مشتریان</h2>
+    <p class="a2">تجربه‌تون رو با من به اشتراک بذارید. ایمیل شما نمایش داده نمی‌شه و نظرها بعد از تأیید منتشر می‌شن.</p>
+    <div class="a34">
+      <form class="a35" id="rf" novalidate autocomplete="off">
+        <h3>ثبت نظر</h3>
+        <div class="a57">
+          <label class="a36">نام<input name="n" maxlength="30" required></label>
+          <label class="a36">نام خانوادگی<input name="f" maxlength="30" required></label>
+        </div>
+        <label class="a36">ایمیل<input name="e" type="email" maxlength="80" dir="ltr" required></label>
+        <label class="a36">نظر شما<textarea name="t" maxlength="500" required></textarea></label>
+        <input class="a55" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="a14 a15" type="submit">ارسال نظر</button>
+        <div class="a40" id="ms" role="status"></div>
+      </form>
+      <div class="a37" id="rl"></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="a23">
+  <div class="a1 a41">
+    <div>
+      <h2>شروع همکاری</h2>
+      <p class="a2" style="margin-bottom:22px">برای مشاوره رایگان یا شروع پروژه، از یکی از راه‌های زیر پیام بدید.</p>
+      <a class="a14 a15" href="tel:09913173934">تماس تلفنی</a>
+    </div>
+    <div class="a42">
+      <a class="a43" href="tel:09913173934"><span class="a44">☎</span><span><b>تماس تلفنی</b><span dir="ltr">09913173934</span></span></a>
+      <a class="a43" href="#contact"><span class="a44">✎</span><span><b>پیام در تلگرام</b><span>آیدی خودتون رو اینجا بذارید</span></span></a>
+      <a class="a43" href="#contact"><span class="a44">@</span><span><b>ایمیل</b><span>ایمیل خودتون رو اینجا بذارید</span></span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="a50">© <span id="yr"></span> علیرضا پاپی — طراح سایت <button id="ao" type="button">ورود مدیر</button></footer>
+
+<div class="a45">
+  <a class="a46" id="fc" href="tel:09913173934"><span class="a47"></span><span class="a48">تماس بگیرید</span></a>
+  <a class="a46" id="fm" href="#contact"><span class="a47"></span><span class="a48">پیام بدید</span></a>
+</div>
+
+<div class="a51" id="ad" role="dialog" aria-modal="true" aria-label="پنل مدیریت">
+  <div class="a52" id="ab"></div>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+const Sanitize={
+  text(s,maxLen){
+    if(typeof s!=='string')return'';
+    let t=s.replace(/[\u0000-\u001F\u007F]/g,'').replace(/\s+/g,' ').trim().slice(0,maxLen);
+    if((t.match(/https?:\/\//g)||[]).length>2)t=t.replace(/https?:\/\/\S+/g,'[link]');
+    return t;
+  },
+  email(s){
+    if(typeof s!=='string')return'';
+    return s.trim().toLowerCase().slice(0,80);
+  },
+  isValidEmail(s){
+    return /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(s)&&s.length<=80;
+  }
+};
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e};
+
+/* سال فوتر و انیمیشن ورود */
+$('#yr').textContent=new Date().getFullYear();
+requestAnimationFrame(()=>setTimeout(()=>$('#hb').classList.add('on'),80));
+
+/* شب و روز */
+const root=document.documentElement;
+function setT(t){root.dataset.t=t;LS.set('t',t);$('#tg').textContent=t==='light'?'🌙':'☀️'}
+setT(LS.get('t',matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'));
+$('#tg').onclick=()=>setT(root.dataset.t==='light'?'dark':'light');
+
+/* منوی موبایل */
+$('#bg').onclick=()=>{const o=$('#nv').classList.toggle('open');$('#bg').setAttribute('aria-expanded',o);$('#bg').textContent=o?'✕':'☰'};
+document.querySelectorAll('#nv a').forEach(a=>a.onclick=()=>{$('#nv').classList.remove('open');$('#bg').textContent='☰'});
+
+/* دکمه‌های شناور */
+let ft;addEventListener('scroll',()=>{document.querySelectorAll('.a46').forEach(f=>f.classList.add('mini'));clearTimeout(ft);ft=setTimeout(()=>document.querySelectorAll('.a46').forEach(f=>f.classList.remove('mini')),400)});
+
+/* ---------- اتصال به بک‌اند ---------- */
+/* بعد از ساخت پروژه در Supabase این دو مقدار را پر کن (کلید عمومی anon، نه service_role): */
+const SB_URL='';   // مثال: https://abcd1234.supabase.co
+const SB_KEY='';   // کلید anon public
+const REMOTE=!!(SB_URL&&SB_KEY);
+let TOK=null;      // توکن ورود مدیر (فقط در حافظه، ذخیره نمی‌شود)
+
+async function api(path,o={},auth=false){
+  const r=await fetch(SB_URL+path,{method:o.m||'GET',headers:{apikey:SB_KEY,Authorization:'Bearer '+(auth&&TOK?TOK:SB_KEY),'Content-Type':'application/json',...(o.h||{})},body:o.b?JSON.stringify(o.b):undefined});
+  if(!r.ok){const e=new Error('http '+r.status);e.status=r.status;throw e}
+  return (r.headers.get('content-type')||'').includes('json')?r.json():null;
+}
+const mp=x=>({id:x.id,n:x.first_name,f:x.last_name,e:x.email||'',t:x.body,ok:x.approved!==undefined?x.approved:true});
+const MIN={h:{Prefer:'return=minimal'}};
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,9);
+let R=REMOTE?[]:LS.get('rv',[]);
+const save=()=>LS.set('rv',R);
+
+const DB=REMOTE?{
+  async pub(){return (await api('/rest/v1/public_reviews?select=*&order=created_at.desc')).map(mp)},
+  async all(){return (await api('/rest/v1/reviews?select=*&order=created_at.desc',{},true)).map(mp)},
+  async send(r){await api('/rest/v1/reviews',{m:'POST',b:{first_name:r.n,last_name:r.f,email:r.e,body:r.t},...MIN})},
+  async add(n,t){await api('/rest/v1/reviews',{m:'POST',b:{first_name:n,last_name:'-',email:'admin@example.com',body:t,approved:true},...MIN},true)},
+  async set(id,ok){await api('/rest/v1/reviews?id=eq.'+encodeURIComponent(id),{m:'PATCH',b:{approved:ok},...MIN},true)},
+  async del(id){await api('/rest/v1/reviews?id=eq.'+encodeURIComponent(id),{m:'DELETE',...MIN},true)},
+  async login(e,p){TOK=(await api('/auth/v1/token?grant_type=password',{m:'POST',b:{email:e,password:p}})).access_token},
+  async blocked(){return await api('/rest/v1/blocked_emails?select=*&order=blocked_at.desc',{},true)},
+  async block(e){await api('/rest/v1/blocked_emails',{m:'POST',b:{email:e.toLowerCase()},...MIN},true)},
+  async unblock(e){await api('/rest/v1/blocked_emails?email=eq.'+encodeURIComponent(e.toLowerCase()),{m:'DELETE',...MIN},true)}
+}:{
+  async pub(){return R.filter(r=>r.ok)},
+  async all(){return R},
+  async send(r){if(LS.get('bl',[]).includes(r.e.toLowerCase()))return;R.push({...r,id:uid(),ok:false});save()},
+  async add(n,t){R.push({id:uid(),n,f:'-',e:'',t,ok:true});save()},
+  async set(id,ok){R.find(x=>x.id===id).ok=ok;save()},
+  async del(id){R=R.filter(x=>x.id!==id);save()},
+  async login(){},
+  async blocked(){return LS.get('bl',[]).map(email=>({email}))},
+  async block(e){const email=e.toLowerCase();const bl=LS.get('bl',[]);if(!bl.includes(email)){bl.push(email);LS.set('bl',bl)}},
+  async unblock(e){LS.set('bl',LS.get('bl',[]).filter(x=>x!==e.toLowerCase()))}
+};
+
+/* ---------- نظرات ---------- */
+const msg=t=>{$('#ms').textContent=t};
+async function drawPublic(){
+  const box=$('#rl');
+  let ok=[];try{ok=await DB.pub()}catch(e){}
+  box.textContent='';
+  if(!ok.length){box.append(el('div','a39','هنوز نظری منتشر نشده. اولین نظر رو شما ثبت کنید.'));return}
+  ok.forEach(r=>{const d=el('div','a38');d.append(el('b','',r.n+' '+r.f.charAt(0)+'.'),el('p','',r.t));box.append(d)});
+}
+$('#rf').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const f=e.target;
+  if(f.web.value)return;                                   // تله ربات‌ها
+  if(Date.now()-LS.get('lt',0)<30000)return msg('کمی صبر کنید و دوباره تلاش کنید.');
+  const n=Sanitize.text(f.n.value,30),fa=Sanitize.text(f.f.value,30),em=Sanitize.email(f.e.value),t=Sanitize.text(f.t.value,500);
+  if(n.length<2||fa.length<2||t.length<10||!Sanitize.isValidEmail(em))return msg('لطفاً همه‌ی فیلدها رو درست پر کنید (نظر حداقل ۱۰ حرف).');
+  try{await DB.send({n,f:fa,e:em,t});LS.set('lt',Date.now());f.reset();msg('نظر شما ثبت شد و بعد از تأیید نمایش داده می‌شه.')}
+  catch(err){
+    if(err.status===401||err.status===403){LS.set('lt',Date.now());f.reset();msg('نظر شما ثبت شد و بعد از تأیید نمایش داده می‌شه.')}
+    else msg('ارسال نشد؛ کمی بعد دوباره تلاش کنید.',true)
+  }
+});
+drawPublic();
+
+/* ---------- پنل مدیر ---------- */
+const enc=new TextEncoder();
+const b64=u=>btoa(String.fromCharCode(...u));
+const unb64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+async function hashPw(pw,salt){
+  const k=await crypto.subtle.importKey('raw',enc.encode(pw),'PBKDF2',false,['deriveBits']);
+  return b64(new Uint8Array(await crypto.subtle.deriveBits({name:'PBKDF2',salt,iterations:210000,hash:'SHA-256'},k,256)));
+}
+const AD=$('#ad'),AB=$('#ab');
+let authed=false;
+function openAdmin(){AD.classList.add('show');authed?panel():(REMOTE||LS.get('pw',null)?login():setup())}
+function closeAdmin(){AD.classList.remove('show');if(location.hash==='#admin')history.replaceState(null,'',location.pathname)}
+AD.addEventListener('click',e=>{if(e.target===AD)closeAdmin()});
+addEventListener('keydown',e=>{if(e.key==='Escape')closeAdmin()});
+$('#ao').onclick=openAdmin;
+addEventListener('hashchange',()=>{if(location.hash==='#admin')openAdmin()});
+if(location.hash==='#admin')openAdmin();
+
+function field(label,type,name){const l=el('label','a36',label);const i=el('input');i.type=type;i.name=name;i.autocomplete='off';l.append(i);return l}
+function form(){const f=el('form');f.style.display='grid';f.style.gap='12px';return f}
+function submitBtn(t){const b=el('button','a14 a15',t);b.type='submit';return b}
+
+function setup(){   /* فقط در حالت آزمایشی (بدون بک‌اند) */
+  AB.textContent='';
+  const f=form(),m=el('div','a40');
+  f.append(field('رمز (حداقل ۱۲ حرف)','password','a'),field('تکرار رمز','password','b'),submitBtn('ذخیره'),m);
+  f.onsubmit=async e=>{e.preventDefault();
+    if(f.a.value.length<12)return m.textContent='رمز باید حداقل ۱۲ حرف باشد.';
+    if(f.a.value!==f.b.value)return m.textContent='دو رمز یکسان نیست.';
+    const s=crypto.getRandomValues(new Uint8Array(16));
+    LS.set('pw',{s:b64(s),h:await hashPw(f.a.value,s)});authed=true;panel()};
+  AB.append(el('h3','','ساخت رمز مدیر'),f);
+}
+
+function login(){
+  AB.textContent='';
+  const f=form(),m=el('div','a40');
+  if(REMOTE)f.append(field('ایمیل مدیر','email','u'));
+  f.append(field('رمز مدیر','password','a'),submitBtn('ورود'),m);
+  f.onsubmit=async e=>{e.preventDefault();
+    const lk=LS.get('lk',{n:0,t:0});
+    const left=lk.t+(lk.n>=3?Math.min(2**(lk.n-2),300)*1000:0)-Date.now();
+    if(left>0)return m.textContent='تلاش زیاد؛ '+Math.ceil(left/1000)+' ثانیه دیگر صبر کنید.';
+    let ok=false;
+    try{
+      if(REMOTE){await DB.login(f.u.value.trim(),f.a.value);ok=true}
+      else{const pw=LS.get('pw');ok=await hashPw(f.a.value,unb64(pw.s))===pw.h}
+    }catch(err){ok=false}
+    if(ok){LS.set('lk',{n:0,t:0});authed=true;panel()}
+    else{LS.set('lk',{n:lk.n+1,t:Date.now()});m.textContent='ایمیل یا رمز اشتباه است.'}};
+  AB.append(el('h3','','ورود مدیر'),f);
+}
+
+function panel(){
+  AB.textContent='';
+  const top=el('div','a54'),out=el('button','','خروج');
+  out.onclick=()=>{authed=false;TOK=null;closeAdmin()};top.append(out);
+  const list=el('div');list.style.display='grid';list.style.gap='10px';
+  const act=async fn=>{try{await fn()}catch(e){if(e.status===401){authed=false;TOK=null;return login()}}await draw();drawPublic()};
+  async function draw(){
+    let rows=[];
+    try{rows=await DB.all()}catch(e){if(e.status===401){authed=false;TOK=null;return login()}}
+    R=REMOTE?rows:R;list.textContent='';
+    if(!rows.length)list.append(el('div','a39','هیچ نظری ثبت نشده.'));
+    rows.forEach(r=>{
+      const d=el('div','a53');
+      d.append(el('b','',r.n+' '+r.f+(r.ok?' — منتشر شده':' — در انتظار تأیید')),el('small','',r.e),el('p','',r.t));
+      const bt=el('div','a54'),ap=el('button','',r.ok?'مخفی کردن':'تأیید و انتشار'),dl=el('button','del','حذف');
+      ap.onclick=()=>act(()=>DB.set(r.id,!r.ok));
+      dl.onclick=()=>{if(confirm('این نظر حذف شود؟'))act(()=>DB.del(r.id))};
+      bt.append(ap,dl);
+      if(r.e){const bk=el('button','','بلاک کردن این ایمیل');bk.onclick=()=>{if(confirm('این ایمیل دیگه نتونه نظر بفرسته؟'))act(()=>DB.block(r.e))};bt.append(bk)}
+      d.append(bt);list.append(d);
+    });
+  }
+  const blist=el('div');blist.style.display='grid';blist.style.gap='10px';
+  async function drawBlocked(){
+    let bl=[];try{bl=await DB.blocked()}catch(e){}
+    blist.textContent='';
+    if(!bl.length){blist.append(el('div','a39','ایمیلی بلاک نشده.'));return}
+    bl.forEach(b=>{
+      const d=el('div','a53');d.append(el('b','',b.email));
+      const bt=el('div','a54'),un=el('button','','رفع بلاک');
+      un.onclick=()=>{act(async()=>{await DB.unblock(b.email);await drawBlocked()})};
+      bt.append(un);d.append(bt);blist.append(d);
+    });
+  }
+  const add=el('form','a35');
+  add.append(el('h3','','افزودن باکس نظر'),field('نام','text','n'),field('متن نظر','text','t'),submitBtn('افزودن و انتشار'));
+  add.onsubmit=e=>{e.preventDefault();
+    const n=add.n.value.trim().slice(0,30),t=add.t.value.trim().slice(0,500);
+    if(n.length<2||t.length<10)return;
+    act(()=>DB.add(n,t));add.reset()};
+  AB.append(el('h3','','پنل مدیریت نظرات'),top,list,add,el('h3','','ایمیل‌های بلاک‌شده'),blist);
+  draw();drawBlocked();
+}
+</script>
+</body>
+</html>
